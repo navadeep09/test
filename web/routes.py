@@ -184,6 +184,9 @@ def index():
         extracted_text += "</tr>"
     extracted_text += """</table>
             </body>
+            <footer>
+                <p>Copyright © Trendx Institute of Technical Analysis. All rights reserved.</p>
+            </footer>
         </html>
             """
     return Response(extracted_text, mimetype='text/html')
