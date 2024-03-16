@@ -127,6 +127,7 @@ def index():
             <tr>
                 <th>S.No.</th>
                 <th>Name</th>
+                <th>ChartLinks</th>
                 <th>CMP Rs.</th>
                 <th>P/E</th>
                 <th>Mar Cap Rs.Cr.</th>
@@ -137,15 +138,16 @@ def index():
                 <th>Qtr Sales Var %</th>
                 <th>ROCE %</th>
                 <th>52w High Rs.</th>
-                <th>52w Low Rs.</th>
-                <th>Down %</th>
+                <th>52w Low Rs.</th>   
             </tr>
             """
     for i in range(len(totalstocks)):
         extracted_text += "<tr>"
         for index, text in enumerate(totalstocks[i]):
             if index == 1:
-                extracted_text += f"<td><a href='https://in.tradingview.com/chart/?symbol={stocksy[i][1]}%3A{stocksy[i][0]}'>{text}</a></td>"
+                extracted_text += f"<td><a href='https://web.sensibull.com/futures-options-data?tradingsymbol={stocksy[i][0]}' target='_blank' >{text}</a></td>"
+                extracted_text += f"<td><a href='https://web.sensibull.com/chart?tradingSymbol={stocksy[i][0]}' target='_blank' >{ChartLink}</a></td>"
+
             else:
                 extracted_text += "<td>" + text + "</td>"
         extracted_text += "</tr>"
