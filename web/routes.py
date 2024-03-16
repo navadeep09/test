@@ -146,7 +146,7 @@ def index():
         for index, text in enumerate(totalstocks[i]):
             if index == 1:
                 extracted_text += f"<td><a href='https://web.sensibull.com/futures-options-data?tradingsymbol={stocksy[i][0]}' target='_blank' >{text}</a></td>"
-                extracted_text += f"<td><a href='https://web.sensibull.com/chart?tradingSymbol={stocksy[i][0]}' target='_blank' >{ChartLink}</a></td>"
+                extracted_text += f"<td><a href='https://web.sensibull.com/chart?tradingSymbol={stocksy[i][0]}' target='_blank' >ChartLink</a></td>"
 
             else:
                 extracted_text += "<td>" + text + "</td>"
