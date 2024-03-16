@@ -100,8 +100,24 @@ def index():
             <title>Breakout Stocks</title>
             </head>
             <style>
+            .header {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                background-color: #f2f2f2; /* Light gray */
+            }
+            .contact-info {
+                position: absolute;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #333;
+                text-align: left;
+                top: 85px;
+                left: 70px;
+            }
             body {
                 font-family: "Times New Roman", Times, serif;
+                background-color: #ADD8E6; /* Light gray */
             }
             table {
                 border-collapse: collapse;
@@ -115,19 +131,34 @@ def index():
             tr:nth-child(even) {
                 background-color: #f2f2f2;
             }
+            img {
+                padding: 9.8px 9.8px 0 0;
+            }
+            footer {
+                
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #f8f9fa;
+                color: black;
+                text-align: center;
+            }
             </style>
+            <header class="header">
             <h1 align="center" >Trendx Institute of Technical Analysis</h1>
-            <h4 align="center" style="font-family: 'Times New Roman'" >mail: TrendxInstitute@gmail.com</h4>
-            <h4 align="center" style="font-family: 'Times New Roman'" >Whatsapp only : +91 8800-611-235</h4>
-
+            <div class="contact-info">
+            <span>Email: TrendxInstitute@gmail.com</span><br>
+            <span>Contact: +91 8800-611-235(only whatsapp)</span>
+            </div class="contact-info">
+            <img src="https://yt3.googleusercontent.com/T3QgXh2XsVBqMbdj8-1Srup3WOZSGihRYC54bTbpUrvnnO5F3c8FLkWj_MFMXZQ-VdrAIhZsMxI=s176-c-k-c0x00ffffff-no-rj" style="position:absolute; top:0; right:0;" height="120" width="120">
+            </header>
             <body>
-            <img src="https://yt3.googleusercontent.com/T3QgXh2XsVBqMbdj8-1Srup3WOZSGihRYC54bTbpUrvnnO5F3c8FLkWj_MFMXZQ-VdrAIhZsMxI=s176-c-k-c0x00ffffff-no-rj" style="position:absolute; top:0; right:0;" height="160" width="160">
             <h3 >Breakout Stocks</h3>
             <table>
             <tr>
                 <th>S.No.</th>
                 <th>Name</th>
-                <th>ChartLinks</th>
+                <th>Chart</th>
                 <th>CMP Rs.</th>
                 <th>P/E</th>
                 <th>Mar Cap Rs.Cr.</th>
@@ -138,7 +169,7 @@ def index():
                 <th>Qtr Sales Var %</th>
                 <th>ROCE %</th>
                 <th>52w High Rs.</th>
-                <th>52w Low Rs.</th>   
+                <th>52w Low Rs.</th>
             </tr>
             """
     for i in range(len(totalstocks)):
